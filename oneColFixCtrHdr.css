@@ -1,0 +1,149 @@
+@charset "utf-8";
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background:none repeat scroll 0 0 #C6D5EA;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColFixCtrHdr #container {
+	width: 780px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	border-top: none;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	padding-top: 10px;
+	margin-bottom: 30px;
+
+}
+
+hr
+{
+	color: #ccc;
+}
+
+.oneColFixCtrHdr #review
+{
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background:none repeat scroll 0 0 #C6D5EA;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding-left: 20;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	background: white;
+}
+
+.oneColFixCtrHdr #header {
+	background: white; 
+	height: 118px;
+	  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+}
+
+.oneColFixCtrHdr #nav a
+{
+	
+
+	
+	padding-left: 10px;
+	text-transform: uppercase;
+
+}
+
+.oneColFixCtrHdr #header img
+{
+	padding-left: 10px;
+}
+
+
+
+a:hover
+{
+	color: red;
+}
+
+.oneColFixCtrHdr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #FFFFFF;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.oneColFixCtrHdr #mainContent p
+{
+	text-align: left;
+}
+
+.oneColFixCtrHdr #mainContent img {
+	background:none repeat scroll 0 0 #AAC6F9;
+/*	border:1px solid #CCCCCC;*/
+	border:0px;
+	padding:3px;
+	margin: 0px 5px 0px 5px;
+}
+
+.gallery li 
+{
+        display: block;
+        list-style: none;
+        width: 320px;
+        min-height: 195px;
+        float: left;
+        margin: 0 10px 10px 0;
+        text-align: center;
+		font-size: 10px;
+		padding-right: 15px;
+		background-color: #AAC6F9;
+		
+}
+
+div#lefttext
+{
+	width: 337px;
+	border: 1px solid;
+	border-color:#CCC;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px 5px 0px 5px;
+}
+
+div#righttext
+{
+	width: 337px;
+	border: 1px solid;
+	border-color: #CCC;
+	float: right;
+	padding: 0px 5px 0px 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.oneColFixCtrHdr #footer {
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:none repeat scroll 0 0 #AAC6F9;
+}
+.oneColFixCtrHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	text-align: center;
+}
+
+li
+{
+	list-style: square;
+	padding-bottom: 5px;
+	text-align: left;
+}
+
+
+.oneColFixCtrHdr #header p
+{
+	text-align: right;
+	padding-right: 10px;
+	color: #369398
+}
