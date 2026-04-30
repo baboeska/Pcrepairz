@@ -121,3 +121,56 @@ nav a:hover {
   border-left: 4px solid var(--accent);
   margin-bottom: 1rem;
   font-style: italic
+
+
+/* Header layout */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grey);
+}
+
+/* Logo */
+#header .logo {
+  max-width: 260px;
+  height: auto;
+}
+
+/* Contact block */
+#header .contact {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+#header .contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#header .contact a:hover {
+  color: red;
+}
+
+#header .location {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #header .contact {
+    text-align: center;
+  }
+}
