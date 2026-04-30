@@ -1,149 +1,123 @@
-@charset "utf-8";
+/* --------------------------------------------------
+   Base Styles
+-------------------------------------------------- */
+
+:root {
+  --blue-light: #C6D5EA;
+  --blue-mid: #AAC6F9;
+  --grey: #CCC;
+  --accent: #369398;
+  --text: #000;
+  --max-width: 780px;
+  --font-body: Verdana, Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background:none repeat scroll 0 0 #C6D5EA;
-	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
-	padding: 0;
-	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
-	color: #000000;
-}
-.oneColFixCtrHdr #container {
-	width: 780px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
-	background: #FFFFFF;
-	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
-	border: 1px solid #000000;
-	border-top: none;
-	text-align: left; /* this overrides the text-align: center on the body element. */
-	padding-top: 10px;
-	margin-bottom: 30px;
-
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background: var(--blue-light);
+  color: var(--text);
+  line-height: 1.5;
 }
 
-hr
-{
-	color: #ccc;
+/* --------------------------------------------------
+   Layout Container
+-------------------------------------------------- */
+
+#container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #000;
+  border-top: none;
+  padding: 1rem;
 }
 
-.oneColFixCtrHdr #review
-{
-	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background:none repeat scroll 0 0 #C6D5EA;
-	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
-	padding-left: 20;
-	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
-	background: white;
+/* --------------------------------------------------
+   Header (modern flexbox layout)
+-------------------------------------------------- */
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grey);
 }
 
-.oneColFixCtrHdr #header {
-	background: white; 
-	height: 118px;
-	  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+#header img.logo {
+  max-width: 250px;
+  height: auto;
 }
 
-.oneColFixCtrHdr #nav a
-{
-	
-
-	
-	padding-left: 10px;
-	text-transform: uppercase;
-
+#header .contact {
+  text-align: right;
+  font-size: 0.95rem;
 }
 
-.oneColFixCtrHdr #header img
-{
-	padding-left: 10px;
+#header .contact a {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
 }
 
-
-
-a:hover
-{
-	color: red;
+#header .contact a:hover {
+  color: red;
 }
 
-.oneColFixCtrHdr #mainContent {
-	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
-	background: #FFFFFF;
-	text-align: left;
-	margin-bottom: 20px;
+/* --------------------------------------------------
+   Navigation
+-------------------------------------------------- */
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--grey);
+  flex-wrap: wrap;
 }
 
-.oneColFixCtrHdr #mainContent p
-{
-	text-align: left;
+nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
 }
 
-.oneColFixCtrHdr #mainContent img {
-	background:none repeat scroll 0 0 #AAC6F9;
-/*	border:1px solid #CCCCCC;*/
-	border:0px;
-	padding:3px;
-	margin: 0px 5px 0px 5px;
+nav a:hover {
+  color: red;
 }
 
-.gallery li 
-{
-        display: block;
-        list-style: none;
-        width: 320px;
-        min-height: 195px;
-        float: left;
-        margin: 0 10px 10px 0;
-        text-align: center;
-		font-size: 10px;
-		padding-right: 15px;
-		background-color: #AAC6F9;
-		
+/* --------------------------------------------------
+   Main Content
+-------------------------------------------------- */
+
+#mainContent {
+  padding: 1rem 0;
 }
 
-div#lefttext
-{
-	width: 337px;
-	border: 1px solid;
-	border-color:#CCC;
-	float: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 0px 5px 0px 5px;
+#mainContent img {
+  background: var(--blue-mid);
+  border: 0;
+  padding: 3px;
+  margin: 0 5px;
+  max-width: 100%;
+  height: auto;
 }
 
-div#righttext
-{
-	width: 337px;
-	border: 1px solid;
-	border-color: #CCC;
-	float: right;
-	padding: 0px 5px 0px 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.oneColFixCtrHdr #footer {
-	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
-	background:none repeat scroll 0 0 #AAC6F9;
-}
-.oneColFixCtrHdr #footer p {
-	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
-	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
-	text-align: center;
-}
-
-li
-{
-	list-style: square;
-	padding-bottom: 5px;
-	text-align: left;
-}
-
-
-.oneColFixCtrHdr #header p
-{
-	text-align: right;
-	padding-right: 10px;
-	color: #369398
-}
+#review {
+  background: #fff;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  margin-bottom: 1rem;
+  font-style: italic
